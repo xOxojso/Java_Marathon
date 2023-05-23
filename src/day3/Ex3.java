@@ -10,13 +10,12 @@ public class Ex3 {
         while (i < 5) {
             double divisible = sc.nextDouble();
             double divider = sc.nextDouble();
+            i++;
             if (divider == 0) {
                 System.out.println("Деление на 0");
-                i++;
                 continue;
             }
             System.out.println(divisible / divider);
-            i++;
         }
     }
 }
