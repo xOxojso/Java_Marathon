@@ -36,9 +36,11 @@ public class MusicBand {
         members.remove(name);
     }
 
-    public static List<String> transferMembers(MusicBand firstMusicBand, MusicBand secondMusicBand) {
-        return Stream.concat(Stream.of(firstMusicBand), Stream.of(secondMusicBand))
-                .map(MusicBand::getMembers).flatMap(Collection::stream).collect(Collectors.toList());
+    public static void transferMembers(MusicBand firstMusicBand, MusicBand secondMusicBand) {
+        for(String members : firstMusicBand.getMembers()) {
+            secondMusicBand.getMembers().add(members);
+        }
+        firstMusicBand.getMembers().clear();
     }
 
     public void printMembers() {

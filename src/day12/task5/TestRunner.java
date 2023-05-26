@@ -22,7 +22,8 @@ public class TestRunner {
 
         MusicBand musicBand2 = new MusicBand("NewJeans", 2022, newJeans);
 
-        List<MusicArtist> musicArtists = MusicBand.transferMembers(musicBand1, musicBand2);
-        musicArtists.forEach(System.out::println);
+        MusicBand.transferMembers(musicBand1, musicBand2);
+        musicBand1.printMembers();
+        musicBand2.printMembers();
     }
 }
